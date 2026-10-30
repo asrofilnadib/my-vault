@@ -1,0 +1,21 @@
+filters:
+  and:
+    - 'file.ext == "md"'
+    - or:
+        - 'file.inFolder("Work")'
+        - 'file.inFolder("Coding")'
+properties:
+  file.name:
+    displayName: Note
+  file.mtime:
+    displayName: Modified
+views:
+  - type: table
+    name: Recent
+    limit: 12
+    order:
+      - file.name
+      - file.mtime
+    sort:
+      - property: file.mtime
+        direction: DESC

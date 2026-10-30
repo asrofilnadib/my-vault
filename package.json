@@ -19,7 +19,10 @@
     "test": "tsx --test",
     "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1",
     "install-plugins": "npx tsx ./quartz/plugins/loader/install-plugins.ts",
-    "prebuild": "npm run install-plugins"
+    "prebuild": "npm run install-plugins",
+    "vault:sync": "bash scripts/sync-vault-to-content.sh",
+    "vault:link": "bash scripts/link-content-to-vault.sh",
+    "vault:publish": "bash scripts/publish-from-vault.sh"
   },
   "engines": {
     "npm": ">=10.9.2",

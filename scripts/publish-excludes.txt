@@ -1,0 +1,15 @@
+# Paths under the Obsidian vault that must NOT go to public my-vault / GitHub Pages.
+# Edit this list, then: npm run vault:publish
+
+Files/
+private/
+_Quick Notes/
+Archive/
+Work/
+.bashrc
+Campuss/
+*.env
+.env
+**/TOKEN.md
+**/*credentials*
+**/*secret*

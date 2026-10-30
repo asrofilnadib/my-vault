@@ -1,17 +1,25 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Quartz 5
+  pageTitle: Asrofil Vault
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: asrofilnadib.github.io/my-vault
+  baseUrl: obsidian.asrofil.my.id
   ignorePatterns:
     - private
     - templates
     - .obsidian
+    - .git
+    - .cursor
+    - .quartz-cache
+    - Files
+    - Archive
+    - Work
+    - _Quick Notes
+    - Campuss
   theme:
     fontOrigin: googleFonts
     cdnCaching: true
@@ -146,7 +154,7 @@ plugins:
   - source: "@quartz-community/favicon"
     enabled: true
   - source: "@quartz-community/og-image"
-    enabled: true
+    enabled: false
   - source: "@quartz-community/cname"
     enabled: true
   - source: "@quartz-community/canvas-page"
