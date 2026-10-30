@@ -37,4 +37,10 @@ if [[ -e "$CONTENT/Files/TOKEN.md" ]]; then
   exit 1
 fi
 
+# Quartz / GitHub Pages need content/index.md → public/index.html (not index.xml RSS)
+if [[ -f "$CONTENT/Home.md" && ! -f "$CONTENT/index.md" ]]; then
+  cp "$CONTENT/Home.md" "$CONTENT/index.md"
+  echo "Created content/index.md from Home.md (site root)."
+fi
+
 echo "Done. $(find "$CONTENT" -name '*.md' | wc -l) markdown files."

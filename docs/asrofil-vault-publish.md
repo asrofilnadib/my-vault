@@ -18,6 +18,8 @@ Repo Quartz: `~/Project/personal/my-vault` (branch `v5`, domain `obsidian.asrofi
 
 Daftar exclude: `scripts/publish-excludes.txt` (sinkronkan dengan `ignorePatterns` di `quartz.config.yaml`).
 
+**Home di web:** root `/` butuh `index.md` di vault (bisa `![[Home]]` saja). Tanpa itu GitHub Pages menampilkan `index.xml` (RSS).
+
 ## Repo
 
 - Backup penuh: repo privat `Asrofil_Vault_Obsidian`
