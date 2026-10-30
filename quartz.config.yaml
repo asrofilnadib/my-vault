@@ -139,7 +139,10 @@ plugins:
       unlistWhenEncrypted: false
       outputPath: static/encryptedContentIndex.json
   - source: "@quartz-community/stacked-pages"
-    enabled: false
+    enabled: true
+    options:
+      maxTabs: 6
+      mobileBreakpoint: 800
     layout:
       position: afterBody
       priority: 50
@@ -199,10 +202,10 @@ plugins:
       position: beforeBody
       priority: 20
   - source: "@quartz-community/tag-list"
-    enabled: false
+    enabled: true
     layout:
       position: beforeBody
-      priority: 30
+      priority: 25
   - source: "@quartz-community/page-title"
     enabled: true
     layout:
@@ -238,13 +241,22 @@ plugins:
     enabled: true
     options:
       links:
-        GitHub: https://github.com/jackyzha0/quartz
-        Discord Community: https://discord.gg/cRFFHYye7t
+        Asrofil Vault: https://obsidian.asrofil.my.id
+        Source: https://github.com/asrofilnadib/my-vault
     layout:
       position: footer
       priority: 50
   - source: "@quartz-community/recent-notes"
-    enabled: false
+    enabled: true
+    options:
+      title: Recent notes
+      limit: 12
+      showTags: true
+      hideTagPages: true
+      hideFolderPages: true
+    layout:
+      position: right
+      priority: 45
   - source: "@quartz-community/spacer"
     enabled: true
     options: {}
@@ -265,6 +277,7 @@ plugins:
         - description
         - tags
         - aliases
+        - cssclasses
       excludedProperties: []
       hidePropertiesView: false
       delimiters: ---

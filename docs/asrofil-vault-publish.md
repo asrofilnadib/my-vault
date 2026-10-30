@@ -28,3 +28,23 @@ Daftar exclude: `scripts/publish-excludes.txt` (sinkronkan dengan `ignorePattern
 ## Setelah push gagal (secret scanning)
 
 Rotasi token yang pernah masuk commit, lalu `git reset --hard origin/v5` jika commit belum ter-push. Publish ulang dengan exclude aktif.
+
+## Plugin Obsidian vs Quartz
+
+Plugin Obsidian (Tasks, Dataview, Homepage, Kanban, …) **tidak** di-install ke Quartz. Yang dipakai: entri `@quartz-community/*` di `quartz.config.yaml` + `npm install`.
+
+| Obsidian | Quartz (repo ini) |
+|----------|-------------------|
+| Admonition / callout | `obsidian-flavored-markdown` |
+| Wikilink, embed, checkbox, Mermaid | OFM (sudah) |
+| Excalidraw | `obsidian-plugin-excalidraw` |
+| Omnisearch | `search` |
+| Graph | `graph` |
+| Tag Wrangler / colored tags | `tag-page`, `tag-list`, `parseTags` |
+| Bases | `bases-page` |
+| Calendar / Periodic / Homepage | tidak ada di web |
+| **Tasks** (` ```tasks `) | **tidak ada** — blok tetap kosong |
+| **Dataview** | **tidak ada** |
+| **Kanban** | hanya teks markdown, bukan board |
+
+Maintenance: `npx quartz plugin install --from-config` (bukan `plugin add` URL repo vault).
